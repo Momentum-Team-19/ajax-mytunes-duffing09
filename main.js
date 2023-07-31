@@ -1,4 +1,5 @@
 const searchResults = document.querySelector('#searchResults')
+const musicPlayer = document.getElementById("musicPlayer")
 const form = document.getElementById("searchZone")
 const searchTerm = document.getElementById("searchTerm")
 
@@ -18,18 +19,25 @@ fetch('https://proxy-itunes-api.glitch.me/search?term=' + searchTerm.value, {
 .then((data) => {
     console.log(data.results)
     for(let result of data.results) {
+        let songBox = document.createElement('div')
+        songBox.classList.add("songBox")
         let picDiv = document.createElement('img')
         picDiv.src = result.artworkUrl60
-        searchResults.appendChild(picDiv)
+        songBox.appendChild(picDiv)
 
         let titleDiv = document.createElement('p')
+        titleDiv.classList.add('titleDiv')
         titleDiv.innerText = result.trackName
-        searchResults.appendChild(titleDiv)
+        songBox.appendChild(titleDiv)
 
         let bandDiv = document.createElement('h4')
         bandDiv.innerText = result.artistName
-        searchResults.appendChild(bandDiv)
-
+        songBox.appendChild(bandDiv)
+        searchResults.appendChild(songBox)
+        songBox.addEventListener("click",() =>
+            musicPlayer.src = result.previewUrl,
+            musicPlayer.controls = true,
+            musicPlayer.preload = "auto")
     }
 
 })

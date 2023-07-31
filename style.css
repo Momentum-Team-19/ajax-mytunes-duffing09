@@ -1,0 +1,61 @@
+h1 {
+text-align: center;
+}
+
+button {
+    color: red;
+    background-color: black;
+    height: 25px;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 10 px;
+}
+
+#musicPlayer {
+    align-content: center;
+    color: red;
+    /* background-color: grey; */
+    height: 25px;
+    width: 500px;
+}
+
+.titleDiv {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* border: 2px solid black; */
+    font-size: x-small;
+}
+#searchResults {
+    padding: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #A9A9A9
+}
+
+.picDiv {
+    border: 1px solid #ccc;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around
+}
+
+
+
+.songBox {
+    width: 20%;
+    display: grid;
+    /* justify-content: center; */
+    align-content: center;
+    border: 1px solid light black;
+    box-shadow: 3px 3px 5px #00000020, -3px -3px 5px #ffffff;
+    /* background: linear-gradient blue; */
+    justify-content: space-around;
+    margin: 3px;
+    border-radius: 5%;
+    padding: 2%
+}

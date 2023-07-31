@@ -4,15 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="main.js" defer></script>
+  <link rel="stylesheet" href="style.css">
   <title>Music Search</title>
 </head>
 <body>
   <h1>Really Cool Music Site</h1>
   <form id ="searchZone">
-    <label>Search: <input id="searchTerm" type="text" /></label>
-    <br /><br />
+    <label>Search: <input id="searchTerm" type="text" placeholder="Enter search" /></label>
+    <!-- <br /><br /> -->
     <button type="submit">Submit</button>
   </form>
+  <div><audio id="musicPlayer" src="" controls></audio></div>
   <section id="searchResults"></section>
   
 </body>
