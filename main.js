@@ -2,10 +2,23 @@ const searchResults = document.querySelector('#searchResults')
 const musicPlayer = document.getElementById("musicPlayer")
 const form = document.getElementById("searchZone")
 const searchTerm = document.getElementById("searchTerm")
+const modeSwitch = document.getElementById("modeSwitch");
 
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode")
+}
+modeSwitch.addEventListener("click", toggleDarkMode)
+
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild)
+    }
+}
 form.addEventListener("submit",(event) => {
 event.preventDefault();
-    console.log(searchTerm.value)
+console.log(searchTerm.value)
+removeAllChildNodes(searchResults)
+
 
 fetch('https://proxy-itunes-api.glitch.me/search?term=' + searchTerm.value, {
     method: 'GET',
@@ -31,6 +44,7 @@ fetch('https://proxy-itunes-api.glitch.me/search?term=' + searchTerm.value, {
         songBox.appendChild(titleDiv)
 
         let bandDiv = document.createElement('h4')
+        bandDiv.classList.add("bandDiv")
         bandDiv.innerText = result.artistName
         songBox.appendChild(bandDiv)
         searchResults.appendChild(songBox)
@@ -38,6 +52,7 @@ fetch('https://proxy-itunes-api.glitch.me/search?term=' + searchTerm.value, {
             musicPlayer.src = result.previewUrl,
             musicPlayer.controls = true,
             musicPlayer.preload = "auto")
+    
     }
 
 })

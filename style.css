@@ -2,13 +2,18 @@ h1 {
 text-align: center;
 }
 
+#searchZone {
+    text-align: center;
+    /* border: 2px solid green; */
+}
+
 button {
-    color: red;
-    background-color: black;
+    color: white;
+    background-color: red;
     height: 25px;
     padding: 5px 5px;
     border: none;
-    border-radius: 10 px;
+    border-radius: 10px;
 }
 
 #musicPlayer {
@@ -16,7 +21,7 @@ button {
     color: red;
     /* background-color: grey; */
     height: 25px;
-    width: 500px;
+    width: 100%;
 }
 
 .titleDiv {
@@ -25,37 +30,98 @@ button {
     overflow: hidden;
     text-overflow: ellipsis;
     /* border: 2px solid black; */
-    font-size: x-small;
+    font-size: small;
 }
 #searchResults {
-    padding: 2px;
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #A9A9A9
+    /* background-color: #A9A9A9; */
+    /* background-color: black; */
+    border-radius: 10px;
 }
 
-.picDiv {
+/* .picDiv {
     border: 1px solid #ccc;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-around
+} */
+
+img {
+    border: 2px solid black;
 }
 
 
 
 .songBox {
     width: 20%;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
     /* justify-content: center; */
     align-content: center;
     border: 1px solid light black;
     box-shadow: 3px 3px 5px #00000020, -3px -3px 5px #ffffff;
     /* background: linear-gradient blue; */
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 3px;
     border-radius: 5%;
-    padding: 2%
+    padding: 3%;
+    background-color: rgba(213,213,213,255) ;
+}
+
+.songBox:hover {
+    transform: translateY(-10px);
+    transition: transform .3s;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), 2px 2px 4px #fff;
+}
+
+label {
+    border-radius: 15px;
+    align-content: center;
+}
+
+input {
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+}
+body.dark-mode {
+    background-color: #333;
+    color: #f8f8f8;
+}
+
+#modeSwitch {
+    background-color: black;
+    color: white;
+    text-align: right;
+    /* float: right; */
+    /* border: 2px solid green; */
+}
+
+#modeSwitch span {
+    float: right;
+}
+
+#modeSwitch:hover {
+    background-color: black;
+    cursor: pointer;
+    height: 35px;
+    padding: 10px 10px;
+    font-size: large;
+}
+
+.bandDiv {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
