@@ -3,6 +3,7 @@ text-align: center;
 }
 
 #searchZone {
+    height: 85px;
     text-align: center;
     /* border: 2px solid green; */
 }
@@ -16,6 +17,10 @@ button {
     border-radius: 10px;
 }
 
+button:hover {
+    cursor: crosshair;
+}
+
 #musicPlayer {
     align-content: center;
     color: red;
@@ -25,12 +30,13 @@ button {
 }
 
 .titleDiv {
+    width: 90%;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     /* border: 2px solid black; */
-    font-size: small;
+    font-size: medium;
 }
 #searchResults {
     padding: 10px;
@@ -52,23 +58,32 @@ button {
 } */
 
 img {
-    border: 2px solid black;
+    text-align: center;
+    /* border: 2px solid black; */
 }
 
 
 
+.bandDiv {
+    text-align: center;
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .songBox {
-    width: 20%;
+    text-align: center;
+    width: 25%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
     /* justify-content: center; */
     align-content: center;
-    border: 1px solid light black;
+    /* border: 2px solid black; */
     box-shadow: 3px 3px 5px #00000020, -3px -3px 5px #ffffff;
     /* background: linear-gradient blue; */
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     margin: 3px;
     border-radius: 5%;
     padding: 3%;
@@ -99,6 +114,9 @@ body.dark-mode {
     background-color: #333;
     color: #f8f8f8;
 }
+#modeSwitch span {
+    float: right;
+}
 
 #modeSwitch {
     background-color: black;
@@ -108,9 +126,6 @@ body.dark-mode {
     /* border: 2px solid green; */
 }
 
-#modeSwitch span {
-    float: right;
-}
 
 #modeSwitch:hover {
     background-color: black;
@@ -120,8 +135,3 @@ body.dark-mode {
     font-size: large;
 }
 
-.bandDiv {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
