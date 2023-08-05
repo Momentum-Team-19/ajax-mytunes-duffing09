@@ -1,3 +1,8 @@
+* {
+    /* box-sizing: border-box; */
+    padding: 0;
+    margin: 0;
+}
 h1 {
 text-align: center;
 }
@@ -30,7 +35,7 @@ button:hover {
 }
 
 .titleDiv {
-    width: 90%;
+    width: 100%;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
@@ -57,36 +62,34 @@ button:hover {
     justify-content: space-around
 } */
 
-img {
+p {
+    width: 100%;
     text-align: center;
-    /* border: 2px solid black; */
+    /* border: 2px solid purple; */
 }
-
-
 
 .bandDiv {
     text-align: center;
-    width: 80%;
+    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    /* border: 2px solid green; */
 }
 .songBox {
-    text-align: center;
-    width: 25%;
+    width: 20%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content: center;
     align-content: center;
-    /* justify-content: center; */
-    align-content: center;
-    /* border: 2px solid black; */
+    /* border: 2px solid red; */
     box-shadow: 3px 3px 5px #00000020, -3px -3px 5px #ffffff;
     /* background: linear-gradient blue; */
     /* justify-content: space-evenly; */
-    margin: 3px;
+    margin: 5px;
     border-radius: 5%;
-    padding: 3%;
+    padding: 10px;
     background-color: rgba(213,213,213,255) ;
 }
 
@@ -103,7 +106,7 @@ label {
 
 input {
     border-radius: 10px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 body {
@@ -133,5 +136,10 @@ body.dark-mode {
     height: 35px;
     padding: 10px 10px;
     font-size: large;
+}
+
+.imageBox {
+    display: flex;
+    justify-content: center;
 }
 

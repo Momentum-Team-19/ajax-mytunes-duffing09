@@ -9,7 +9,7 @@
 </head>
 <body>
   <button id="modeSwitch">
-    <span>Light/Dark</span>
+    <span>🌙</span>
   </button>
   <h1>Really Cool Music Site</h1>
   <form id ="searchZone">
@@ -17,7 +17,13 @@
     <!-- <br /><br /> -->
     <button type="submit">Enter</button>
   </form>
-  <div><audio id="musicPlayer" src=""></audio></div>
+  <figure>
+    <figcaption id = "figCaption"></figcaption>
+    <div id ="playBox">
+      <audio id = "musicPlayer" controls = true preload="auto" src=""></audio>
+    </div>
+  </figure>
+
   <section id="searchResults"></section>
   
 </body>
