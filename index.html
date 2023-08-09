@@ -4,8 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="main.js" defer></script>
+  <link rel="stylesheet" href="style.css">
   <title>Music Search</title>
 </head>
 <body>
+  <button id="modeSwitch">
+    <span>🌙</span>
+  </button>
+  <h1>Really Cool Music Site</h1>
+  <form id ="searchZone">
+    <label><input id="searchTerm" type="text" placeholder="Enter search" required/></label>
+    <!-- <br /><br /> -->
+    <button type="submit">Enter</button>
+  </form>
+  <figure>
+    <figcaption id = "figCaption"></figcaption>
+    <div id ="playBox">
+      <audio id = "musicPlayer" controls = true preload="auto" src=""></audio>
+    </div>
+  </figure>
+
+  <section id="searchResults"></section>
+  
 </body>
 </html>
